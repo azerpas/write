@@ -10,7 +10,7 @@ ogImage:
   url: '/assets/blog/rust-encryption-1/lock.jpg'
 ---
 
-## Storing sensitive data? Easy
+## Storing sensitive data? Why?
 
 At Symbiose, we're building an awesome app that will interact with multiple blockchains, thus requiring some reflexion about one of the core element of a blockchain, the wallet and specificaly its storing logic.
 
