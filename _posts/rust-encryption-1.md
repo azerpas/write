@@ -123,6 +123,21 @@ let key = get_key_from_password(password, &ciphertext[..XCHACHA_NONCESIZE])?;
 open(&key, ciphertext).with_context(|| "Ciphertext was tampered with")
 ```
 
+## Applied to Solana
+Let's create a wallet with Solana SDK and encode it for future usage.
+```rust
+use solana_sdk::signature::Keypair;
+let wallet = Keypair::new();
+```
+Now that we have the wallet, what you want to do is converting it to plainbytes to prepare it for the encoding. Use the `Keypair::to_base58_string()` function to convert the structure to a readable string, then transform it to bytes.
+```rust
+let plainbytes = wallet.to_base58_string().as_bytes().to_vec();
+```
+Finally, use the defined `encrypt` function to encrypt the wallet.
+```rust
+let nonce = nonce()?;
+encrypted_private_key = encrypt(&plainbytes, password, &nonce)?;
+```
 
 ----------------------
 
