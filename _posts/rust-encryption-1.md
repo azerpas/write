@@ -1,5 +1,5 @@
 ---
-title: 'Encrypt and decrypt data with "Orion" library in Rust'
+title: 'Encrypt and decrypt data with the "Orion" library in Rust'
 excerpt: "Safely encrypt sensitive data has always been a delicate operation. Especially when using a single password to encrypt and decrypt the data. Some say that at this point you already lost or that you shouldn't do this at all. But sometimes there's no choice! Having to store Solana wallets and protecting it by a single password, I've had to use something that can do this for me."
 coverImage: '/assets/blog/rust-encryption-1/lock.jpg'
 date: '2022-05-12T12:35:07.322Z'
