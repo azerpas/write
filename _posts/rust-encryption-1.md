@@ -12,11 +12,11 @@ ogImage:
 
 ## Storing sensitive data? Why?
 
-At Symbiose, we're building an awesome app that will interact with multiple blockchains, thus requiring some reflexion about one of the core element of a blockchain, the wallet and specificaly its storing logic.
+At [Symbiose](https://www.linkedin.com/company/symbiosesmbs/), we're building an awesome app that will interact with multiple blockchains, thus requiring some reflexion about one of the core element of a blockchain, the wallet and specificaly its storing logic.
 
-Let's take the example of the Solana blockchain. A Solana wallet is represented by a Keypair object, which is a pair of public and private keys.
+Let's take the example of the [Solana](https://solana.com/) blockchain. A Solana wallet is represented by a [Keypair](https://solana-labs.github.io/solana-web3.js/classes/Keypair.html) object, which is a pair of public and private keys.
 
-`solana-cli` is a command line interface for the Solana blockchain, that allows you to generate a new wallet, or to import a wallet from a file. It uses simple JSON files to store the generated keypairs, saving the **unencrypted** private key as a `u8` array in the file. To retrieve it back, the cli derives the public key from the private key and then uses `Keypair::from_bytes` to create a new Keypair object.
+[`solana-cli`](https://docs.solana.com/cli/install-solana-cli-tools) is a command line interface for the Solana blockchain, that allows you to generate a new wallet, or to import a wallet from a file. It uses simple JSON files to store the generated keypairs, saving the **unencrypted** private key as a `u8` array in the file. To retrieve it back, the cli derives the public key from the private key and then uses `Keypair::from_bytes` to create a new Keypair object.
 
 While this method is simple and fast, `solana-cli` stores this data as plaintext and anyone gaining access to the machine could easily fetch the keypairs.
 
@@ -79,13 +79,13 @@ use orion::hazardous::{
 };
 ```
 
-Let's use the function we just created to encrypt to retrieve a SecretKey object.
+Let's use the function we just created to encrypt to retrieve a *Secret Key* object.
 ```rust
 let key = get_key_from_password(password, nonce)?;
 let key = XSecretKey::from_slice(key.unprotected_as_bytes()).with_context(|| "Key is invalid")?;
 ```
 
-Alright! Now that we have our SecretKey object, we can prepare the output buffer for the encrypted data.
+Alright! Now that we have our *Secret Key* object, we can prepare the output buffer for the encrypted data.
 
 ```rust
 let nonce = Nonce::from_slice(nonce).with_context(|| "Nonce is too short")?;
@@ -116,7 +116,7 @@ use orion::hazardous::stream::xchacha20::XCHACHA_NONCESIZE;
 ensure!(ciphertext.len() > XCHACHA_NONCESIZE, "Ciphertext is too short");
 ```
 
-Now get the Secret Key to decrypt the ciphertext.
+Now get the *Secret Key* to decrypt the ciphertext.
 
 ```rust
 let key = get_key_from_password(password, &ciphertext[..XCHACHA_NONCESIZE])?;

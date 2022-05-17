@@ -5,7 +5,7 @@ coverImage: '/assets/blog/hello-world/cover.jpg'
 date: '2022-05-10T05:35:07.322Z'
 author:
   name: Anthony Manikhouth
-  picture: '/assets/blog/authors/tim.jpeg'
+  picture: '/assets/blog/authors/anthony.jpeg'
 ogImage:
   url: '/assets/blog/first-post/cover.jpg'
 ---
