@@ -11,20 +11,20 @@ ogImage:
 ---
 
 ## Selling NFTs to your community is harder than ever
-[ERC-721]() has been a great standard for tokenized collectibles. Easily customizable, you can create a lot of different ways to sell and distribute collectibles to your community.
+[ERC-721](https://ethereum.org/fr/developers/docs/standards/tokens/erc-721/) has been a great standard for tokenized collectibles. Easily customizable, you can create a lot of different ways to sell and distribute collectibles to your community.
 
 Sadly, it doesn't support any kind of bot protection out of the box, and boy these bots can get annoying. 
 - ➡️ They are faster than humans by seconds
 - ➡️ They amplify the disparity between the richest buyers and the lesser by driving the gas fees to high levels
 - ➡️ They will create network congestion and slow down the Ethereum network
 
-There have been a number of attempts to create a solution to this problem, like [Civic]() smart-contracts that can be used to verify the identity of the buyer, thus slowing down a lot of bots. But with the surge of high gas prices, it's currently not possible to create a solution on the blockchain that will be sustainable.
+There have been a number of attempts to create a solution to this problem, like [Civic](https://www.civic.com/) smart-contracts that can be used to verify the identity of the buyer, thus slowing down a lot of bots. But with the surge of high gas prices, it's currently not possible to create a solution on the blockchain that will be sustainable.
 
 ## Web2 to the rescue
-Bots have been an issue for a decade in the Web2 ecosystem hence why there's so much anti-bots solutions existing and making life harder for the bots. [Akamai](), [Datadome](), [Cloudflare](), [reCaptcha]() are some of the most popular anti-bot solutions and even if a few bypass exist (btw checkout this [great repo]() where we analyze Akamai Bot Protection), **I would recommend** using one of them whenever you are dealing with high traffic on critical production servers. So why not try to integrate one of these solutions into your Web3 project?
+Bots have been an issue for a decade in the Web2 ecosystem hence why there's so much anti-bots solutions existing and making life harder for the bots. [Akamai](https://www.akamai.com/fr/products/bot-manager), [Datadome](https://datadome.co/fr/), [Cloudflare](https://www.cloudflare.com/fr-fr/), [reCaptcha](https://www.google.com/recaptcha/about/) are some of the most popular anti-bot solutions and even if a few bypass exist (btw checkout this [great repo](https://github.com/char/bpre) where we analyze Akamai Bot Protection), **I would recommend** using one of them whenever you are dealing with high traffic on critical production servers. So why not try to integrate one of these solutions into your Web3 project?
 
 ### How can it help?
-Let's say you are implementing a classic NFT minting system on the Ethereum blockchain. You would most likely use a [ERC-721]() smart contract to store the tokens and a basic frontend to interact with the smart contract.
+Let's say you are implementing a classic NFT minting system on the Ethereum blockchain. You would most likely use a [ERC-721](https://ethereum.org/fr/developers/docs/standards/tokens/erc-721/) smart contract to store the tokens and a basic frontend to interact with the smart contract.
 As we said before, the main caveat here is leaving the door open for bots to purchase the tokens directly from the smart contract without using the frontend. 
 
 ![bot to smartcontract](/assets/blog/fair-mint/bot-to-sc.png)
@@ -38,7 +38,7 @@ In definitive what we want to do is force a bot challenge to be solved by the us
 
 As you can see, the server add an extra step between the smart contract and the bot/front-end. You can add **any type of bot protection** with this system as the bot will always require a valid response from the backend to be validated by the smart contract. 
 
-Futhermore, we make sure that the verification is obligatory. How? Our smart contract, that we will detail in a later post, **will require that the hash sent by the user has been signed by a designated account controlled by the owner of the smart contract**. The same account **will be used to sign the hash sent by the user** in our back-end. Attackers would need to find out the private key of the account to sign the hash and bypass our verification.
+Futhermore, we make sure that the verification is obligatory. How? Our smart contract, *that we will detail in a later post*, **will require that the hash sent by the user has been signed by a designated account controlled by the owner of the smart contract**. The same account **will be used to sign the hash sent by the user** in our back-end. Attackers would need to find out the private key of the account to sign the hash and bypass our verification.
 
 ## Implementation with NextJS and reCaptcha
 Let's create a simple example of how to integrate reCaptcha into your minting website.
