@@ -34,7 +34,7 @@ With similar tools to the ones used in Web2 we could mitigate this behavior and 
 ### But how are we going to integrate our Web2 solutions into our NFT minting system?
 In definitive what we want to do is force a bot challenge to be solved by the user. To achieve this we're going to create an **extra-step** to the minting process which require to **call and wait for a response from a given backend**.
 
-![server in between](/assets/blog/fair-mint/server-in-between.png)
+![server in between](/assets/blog/fair-mint/server-inbetween.png)
 
 As you can see, the server add an extra step between the smart contract and the bot/front-end. You can add **any type of bot protection** with this system as the bot will always require a valid response from the backend to be validated by the smart contract. 
 
