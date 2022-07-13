@@ -14,9 +14,9 @@ ogImage:
 [ERC-721](https://ethereum.org/fr/developers/docs/standards/tokens/erc-721/) has been a great standard for tokenized collectibles. Easily customizable, you can create a lot of different ways to sell and distribute collectibles to your community.
 
 Sadly, it doesn't support any kind of bot protection out of the box, and boy these bots can get annoying. 
-- ➡️ They are faster than humans by seconds
-- ➡️ They amplify the disparity between the richest buyers and the lesser by driving the gas fees to high levels
-- ➡️ They will create network congestion and slow down the Ethereum network
+- ➡️ **They** are faster than humans by seconds
+- ➡️ **They** amplify the disparity between the richest buyers and the lesser by driving the gas fees to high levels
+- ➡️ **They** will create network congestion and slow down the Ethereum network
 
 There have been a number of attempts to create a solution to this problem, like [Civic](https://www.civic.com/) smart-contracts that can be used to verify the identity of the buyer, thus slowing down a lot of bots. But with the surge of high gas prices, it's currently not possible to create a solution on the blockchain that will be sustainable.
 
