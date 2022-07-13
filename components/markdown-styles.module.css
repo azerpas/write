@@ -17,6 +17,10 @@
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
 
+.markdown h4 {
+  @apply text-xl mt-8 mb-4 leading-snug;
+}
+
 .markdown p code, .markdown h2 code {
   padding: .2em .4em;
   background-color: rgba(110, 118, 129, 0.4);
