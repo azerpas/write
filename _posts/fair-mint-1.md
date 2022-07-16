@@ -89,7 +89,7 @@ if (process.env.RECAPTCHA_SECRET) {
 }
 ```
 
-Then we generate a hash of the user's account, amount of token, generate nonce, sign it with the owner private key, and return it to the user.
+Then we generate a keccak256 hash of the user's account, amount of token, generated nonce, and finally sign it with the owner private key, and return it to the user.
 ```typescript
 const nonce = crypto.randomBytes(9).toString("base64");
 
@@ -136,3 +136,5 @@ export const mint = async (props: {hash: string, signature: string, nonce: strin
 ```
 
 In the next post we'll learn how to integrate this solution into our smart contract. 
+
+Check out the [GitHub repository](https://github.com/azerpas/nft-fair-mint/) for the full source.
