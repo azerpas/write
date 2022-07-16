@@ -136,3 +136,5 @@ export const mint = async (props: {hash: string, signature: string, nonce: strin
 ```
 
 In the next post we'll learn how to integrate this solution into our smart contract. 
+
+Check out the [GitHub repository](https://github.com/azerpas/nft-fair-mint/) for the full source.
