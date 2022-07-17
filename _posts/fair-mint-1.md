@@ -38,7 +38,7 @@ In definitive what we want to do is force a bot challenge to be solved by the us
 
 As you can see, the server add an extra step between the smart contract and the bot/front-end. You can add **any type of bot protection** with this system as the bot will always require a valid response from the backend to be validated by the smart contract. 
 
-Futhermore, we make sure that the verification is obligatory. How? Our smart contract, *that we will detail in a later post*, **will require that the hash sent by the user has been signed by a designated account controlled by the owner of the smart contract**. The same account **will be used to sign the hash sent by the user** in our back-end. Attackers would need to find out the private key of the account to sign the hash and bypass our verification.
+Futhermore, we make sure that the verification is obligatory. How? Our smart contract, *that we will detail in [this post](https://blog.azerpas.com/posts/fair-mint-2)*, **will require that the hash sent by the user has been signed by a designated account controlled by the owner of the smart contract**. The same account **will be used to sign the hash sent by the user** in our back-end. Attackers would need to find out the private key of the account to sign the hash and bypass our verification.
 
 ## Implementation with NextJS and reCaptcha
 Let's create a simple example of how to integrate reCaptcha into your minting website.
@@ -135,6 +135,6 @@ export const mint = async (props: {hash: string, signature: string, nonce: strin
 }
 ```
 
-In the next post we'll learn how to integrate this solution into our smart contract. 
+In the [next post](https://blog.azerpas.com/posts/fair-mint-2) we'll learn how to integrate this solution into our smart contract. 
 
 Check out the [GitHub repository](https://github.com/azerpas/nft-fair-mint/) for the full source.
