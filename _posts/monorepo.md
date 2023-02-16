@@ -1,6 +1,6 @@
 ---
 title: 'Structure your application with a monorepo'
-excerpt: 'Monorepos are a great way to structure your application. It allows you to have a single repository for all your projects, and to share code between them. But it also comes with some drawbacks. Let's see if it's the right solution for you.'
+excerpt: "Monorepos are a great way to structure your application. It allows you to have a single repository for all your projects, and to share code between them. But it also comes with some drawbacks. Let's see if it's the right solution for you."
 coverImage: '/assets/blog/monorepo/cover.jpeg'
 date: '2022-12-20T12:35:07.322Z'
 author:
