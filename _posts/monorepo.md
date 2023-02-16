@@ -1,6 +1,6 @@
 ---
 title: 'Structure your application with a monorepo'
-excerpt: "Monorepos are a great way to structure your application. It allows you to have a single repository for all your projects, and to share code between them. But it also comes with some drawbacks. Let's see if it's the right solution for you."
+excerpt: "Monorepos are a great way to structure your application. It allows you to have a single repository for all your projects, and to share code between them. But it also comes with some drawbacks. Check out this article if you want to know more about monorepos and why we decided to use them for Fractif, our Ethereum-based luxury assets PoC marketplace."
 coverImage: '/assets/blog/monorepo/cover.jpeg'
 date: '2022-12-20T12:35:07.322Z'
 author:
@@ -25,7 +25,7 @@ The decision was motivated by a few factors:
 - Having a landing page, a marketplace, a dashboard and a blog, all sharing the same brand identity, we wanted to have a single repository for all our projects, and to share the UI components between them. We could've done it with a single UI package that we could add as an npm dependency on each project. But by having this package in the same repository as the projects, we can make changes to the UI package and see the changes reflected in the projects without having to publish the package to npm and update the version in each project.
 - Being able to share tsconfig.json, eslint, prettier, tests config, ci/cd config, etc. between projects.
 
-### Fractif
+### Monorepo applied to Fractif, our Ethereum-based luxury assets PoC marketplace
 Our monorepo is structured as follows:
 - `packages` contains all our packages that can be shareable between the projects:
   - `ui` contains all the UI components that are shared between the projects
