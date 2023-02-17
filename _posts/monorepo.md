@@ -24,6 +24,7 @@ The decision was motivated by a few factors:
 - We wanted to have a single CI/CD pipeline, and to deploy all our projects at once based on the changes made to a given package/project. This is possible with [Github Actions](https://github.com/features/actions).
 - Having a landing page, a marketplace, a dashboard and a blog, all sharing the same brand identity, we wanted to have a single repository for all our projects, and to share the UI components between them. We could've done it with a single UI package that we could add as an npm dependency on each project. But by having this package in the same repository as the projects, we can make changes to the UI package and see the changes reflected in the projects without having to publish the package to npm and update the version in each project.
 - Being able to share tsconfig.json, eslint, prettier, tests config, ci/cd config, etc. between projects.
+- [And many more.](https://monorepo.tools/#monorepo-features)
 
 ### Monorepo applied to Fractif, our Ethereum-based luxury assets PoC marketplace
 Our monorepo is structured as follows:
@@ -50,3 +51,12 @@ But it also comes with some drawbacks.
 I love planning my projects and keep track of what I'm doing through GitHub `Issues` and `Projects`. But with a monorepo, it's hard to keep track of what's going on in each project. It can get messy really fast, especially on large open source projects (try having a look at [Solana monorepo](https://github.com/solana-labs/solana/issues)). In this case, labels can be used to filter the issues and projects can be used to group them.
 ### Hard to scale
 Monorepos are great for small projects, but they can get messy really fast on large projects. Need to modify a package that is used by multiple projects? Good luck. You'll have to make sure that the changes you make don't break the other projects. New to the project? Sad. You'll have to go through all the projects to understand how they work.
+
+## Conclusion
+Monorepos come with its pros and cons, and while it has proven itself production-ready for us and for many other companies over the years, it's not a silver bullet. It's a great way to structure your application, but it also comes with some drawbacks. Based on your spesific needs, you might want to use a monorepo or not.
+
+## More reading
+- [Understanding Monorepos](https://monorepo.tools)
+- [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces)
+- [nx, a powerful monorepo tool](https://nx.dev)
+- [Fireship video on monorepos](https://www.youtube.com/watch?v=9iU_IE6vnJ8)
