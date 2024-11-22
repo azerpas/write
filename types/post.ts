@@ -11,6 +11,8 @@ type PostType = {
     url: string
   }
   content: string
+  externalLink?: string
+  writtenFor?: string
 }
 
 export default PostType

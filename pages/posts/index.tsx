@@ -34,6 +34,8 @@ export const getStaticProps = async () => {
       'author',
       'coverImage',
       'excerpt',
+      'externalLink',
+      'writtenFor',
     ])
   
     return {
